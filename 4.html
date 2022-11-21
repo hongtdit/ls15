@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvasId" width="165" height="145"></canvas>
+    <script>
+        var context = document.getElementById("canvasId").getContext("2d");
+        var width = 125;  // Triangle Width
+var height = 105; // Triangle Height
+var padding = 20;
+
+// Draw a path
+context.beginPath();
+context.moveTo(padding + width/2, padding);        // Top Corner
+context.lineTo(padding + width, height + padding); // Bottom Right
+context.lineTo(padding, height + padding);         // Bottom Left
+context.closePath();
+
+// Fill the path
+context.fillStyle = "#ffc821";
+context.fill();
+// Create fill gradient
+var gradient = context.createLinearGradient(0, 0, 0, height);
+gradient.addColorStop(0, "#ffc821");
+gradient.addColorStop(1, "#faf100");
+	
+// Fill the path
+context.fillStyle = gradient;
+context.fill();
+    </script>
+</body>
+</html>
