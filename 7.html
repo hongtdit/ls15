@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        button{
+            margin:300px ;
+        }
+    </style>
+  </head>
+  <body>
+    <script>
+      var Temperature = function (celsius) {
+        this.celsius = function () {
+          return celsius * 1.8 + 32;
+        };
+        this.ToKenvin = function () {
+          return celsius + 273;
+        };
+      };
+      function exchange() {
+        var rec1 = new Temperature(10);
+        var exchangec = rec1.celsius();
+        var exchangek = rec1.ToKenvin();
+        alert(" Độ F tương ứng là " + exchangec + " Độ Kenvin tương ứng là " + exchangek);
+      }
+    </script>
+    <button type="button" onclick="exchange()">EXCHANGE</button>
+  </body>
+</html>

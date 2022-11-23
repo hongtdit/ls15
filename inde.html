@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    var Moblie = function (battery, mess, mess1, mess2) {
+        this.battery = battery;
+        this.mess = mess;
+        this.mess1 = mess1;
+        this.mess2 = mess2;
+
+        this.checkStatusOnOff = function () {
+
+            if (this.battery > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        };
+
+        this.turnOn = function () {
+            alert("Dienthoaidangbat");
+        };
+
+        this.turnOff = function () {
+            alert("Dienthoaidatat");
+        };
+
+        this.charge = function () {
+            alert("Sạc Pin" + this.battery++);
+        };
+
+        this.writeMessenger = function () {
+            prompt("This is a messenger");
+        };
+
+        this.massengerL = function () {
+            alert("massenger sent");
+
+        };
+        this.afterUse = function () {
+            alert("Stop :" + this.battery--);
+        }
+
+    };
+    var mobile = new Moblie(10, 100, 100, 100);
+
+    function main() {
+        mobile.turnOff();
+    }
+
+    function main1() {
+        mobile.turnOn();
+    }
+
+    function main2() {
+        mobile.charge();
+    }
+
+    function main3() {
+        mobile.writeMessenger();
+    }
+
+    function main4() {
+        mobile.massengerL();
+    }
+
+    function main5() {
+        mobile.afterUse();
+
+    }
+</script>
+<font style="margin-left: 280px;" > Ứng dụng điện thoại </font>
+<table border="1">
+
+    <th><button type="button" onclick="main()";
+
+    padding: 15px 20px;
+
+    border-radius: 4px;> DIENTHOAIDANGBAT
+    </button></th>
+
+    <th><button type="button" onclick="main1()";
+ 
+    padding: 15px 20px;
+   
+    border-radius: 4px;> DIENTHOAIDANGTAT
+    </button></th>
+
+    <th><button type="button" onclick="main2()" ;
+
+    padding: 15px 20px;
+    
+    border-radius: 4px;> Sạc Pin
+    </button></th>
+
+    <th><button type="button" onclick="main3()";
+   
+    
+    padding: 15px 20px;
+    border-radius: 4px;> Soạn Tin Nhắn
+    </button></th>
+
+    <th><button type="button" onclick="main4()" ;
+    
+    
+    padding: 15px 20px;
+
+    border-radius: 4px;> Đã Nhận Tin Nhắn
+    </button></th>
+
+    <th><button type="button" onclick="main5()";
+    padding: 15px 20px;
+   
+    border-radius: 4px;> Sử dụng
+    </button></th>
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //      function Rectangle(width,height){
+      //         this.width=width;
+      //         this.height=height;
+      //     //     this.getwidth = function(){
+      //     // return width;}
+      //     // this.getheight = function(){
+      //     // return height;}
+
+      //     this.getarea =function(width,height){
+      //         return this.width* this.height
+      //     }
+      //     this.getchuvi =function(){
+      //         return (this.width+this.height)/2
+      //     }
+      // }
+      // let hcn = new Rectangle(200,300);
+      // let area = hcn.getarea(30,30);
+      // let chuvi= hcn.getchuvi();
+      // console.log(area);
+      // console.log(chuvi);
+      //b1 khoi tao lop Rectangle gom width, height, getarea, getchuvi
+      function rectangle(width, height) {
+        //khai bao va khoi tao thuoc tinh dai va rong
+        this.width = width;
+        this.height = height;
+          //khai bao hanh vi cua doi tuong
+          this.area = function getarea() {
+            return this.width * this.height;
+            this.chuvi = function getchuvi() {
+              return (this.width + this.height) * 2;
+            }
+          }
+      }
+      //khoi tao doi tuong tu rectangle
+      let rec = new rectangle(20, 40);
+      // in ra dien tich
+      console.log("dien tich hinh chu nhat", rec.area());
+      console.log("chu vi hcn la", rec.chuvi());
+      //thay doi
+      rec.width = 30;
+      rec.height = 50;
+      // in ra dien tich hcn sau khi thay doi
+      console.log("dien tich sau thi thay doi", rec.area());
+      console.log("chu vi sau khi thay doi", rec.chuvi);
+    </script>
+  </body>
+</html>

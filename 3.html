@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <canvas id="DemoCanvas" width="500" height="600"></canvas> 
     <script>
          let Rectangle = function(width,height) {
         this.width = width;
@@ -23,9 +24,21 @@
         }
 };
     
-    let cỉcle1 = new Rectangle(2,3);
+    let cỉcle1 = new Rectangle(200,300);
     let area = cỉcle1.getarea();
     console.log(area);
+    // ve hinh chu nhat
+    var canvas = document.getElementById("DemoCanvas");
+if (canvas.getContext) 
+{
+  var ctx = canvas.getContext('2d');
+  ctx.fillStyle='#fa4b2a';    // color of fill
+  ctx.fillRect(200, 360, 200, 300); // create rectangle  
+}
+
+
+
+
     </script>
 </body>
 </html>
